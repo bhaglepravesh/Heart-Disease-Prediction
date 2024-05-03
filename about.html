@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type = "image/x-icon" href="logo.png">
+<title> About us</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: blue;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body style="background-color: lime;">
+
+<div class="about-section">
+  <h1>About Us</h1>
+  
+  <p>Welcome to HeartGuardian, your trusted ally in heart health. Our advanced predictor and chatbot combine 
+    cutting-edge technology and medical expertise to empower you in managing heart disease risk. Discover 
+    personalized insights and guidance for a healthier heart journey.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> -->
+      <div class="container">
+        <h2>Pravesh Kumar</h2>
+        
+        <p class="title">CEO & Founder</p>
+        <p> Working in Tata Consultancy Services, Graduated From Lovely Professional University Punjab.</p>
+        <p> Email Id-<br>praveshkumar.my255@gmail.com</p>
+        <p> mob. No.-8126853262</p>
+        <p><button class="button">Contact</button></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"/> -->
+      <div class="container">
+        <h2>Sahil Raj</h2>
+        
+        <p class="title">Data Scientist</p>
+        <p> Working in Honda Company, Graduated From Lovely Professional University Punjab.</p>
+        <p> Email Id-<br>razsahil121@gmail.com</p>
+        <p> mob. No.-9515395437</p>
+        <p><button class="button">Contact</button></p>
+       
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"/> -->
+      <div class="container">
+        <h2>Gautam Kumar</h2>
+        
+        <p class="title">Manager & Art Director</p>
+        <p> Working in Capgemini India, Graduated From Lovely Professional University Punjab.</p>
+        <p> Email Id-<br>krgauti678@gmail.com</p>
+        <p> mob. No.-9717618577</p>
+        <p><button class="button">Contact</button></p>
+       
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="column">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="container">
+        <h2>Satyanand Kumar</h2>
+        
+        <p class="title">Designer</p>
+        <p> Working in RINEX Technologies, Graduated From Lovely Professional University Punjab.</p>
+        <p> Email Id-<br>9771satyanandsharma@gmail.com</p>
+        <p> mob. No.-9958422947</p>
+        <p><button class="button">Contact</button></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

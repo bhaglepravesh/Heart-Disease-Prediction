@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type = "image/x-icon" href="logo.png">
+<title>Heart Disease Risk Predictor</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+    .container {
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #007bff;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Heart Disease Risk Predictor</h2>
+    <input type="number" id="age" placeholder="Age">
+    <input type="number" id="education" placeholder="Education Level">
+    <input type="number" id="Gender" placeholder="Gender">
+    <input type="number" id="issmoking" placeholder="Smoking">
+    <input type="number" id="cigsPerDay" placeholder="Cigarettes Per Day">
+    <input type="number" id="BPMeds" placeholder="Blood Pressure Medications">
+    <input type="number" id="prevalentStroke" placeholder="Prevalent Stroke">
+    <input type="number" id="prevalentHyp" placeholder="Prevalent Hypertension">
+    <input type="number" id="diabetes" placeholder="Diabetes">
+    <input type="number" id="totChol" placeholder="Total Cholesterol">
+    <input type="number" id="sysBP" placeholder="Systolic Blood Pressure">
+    <input type="number" id="diaBP" placeholder="Diastolic Blood Pressure">
+    <input type="number" id="BMI" placeholder="Body Mass Index">
+    <input type="number" id="heartRate" placeholder="Heart Rate">
+    <input type="number" id="glucose" placeholder="Glucose">
+    <button onclick="predictRisk()">Predict Risk</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    function predictRisk() {
+        // Collect input values
+        var age = parseFloat(document.getElementById('age').value);
+        var education = parseFloat(document.getElementById('education').value);
+        var Gender = parseFloat(document.getElementById('Gender').value);
+        var issmoking = parseFloat(document.getElementById('issmoking').value);
+        var cigsPerDay = parseFloat(document.getElementById('cigsPerDay').value);
+        var BPMeds = parseFloat(document.getElementById('BPMeds').value);
+        var prevalentStroke = parseFloat(document.getElementById('prevalentStroke').value);
+        var prevalentHyp = parseFloat(document.getElementById('prevalentHyp').value);
+        var diabetes = parseFloat(document.getElementById('diabetes').value);
+        var totChol = parseFloat(document.getElementById('totChol').value);
+        var sysBP = parseFloat(document.getElementById('sysBP').value);
+        var diaBP = parseFloat(document.getElementById('diaBP').value);
+        var BMI = parseFloat(document.getElementById('BMI').value);
+        var heartRate = parseFloat(document.getElementById('heartRate').value);
+        var glucose = parseFloat(document.getElementById('glucose').value);
+
+        // Make API call to your ML model and get the prediction
+        // For demonstration purposes, let's assume the prediction is 0 or 1
+        var prediction = Math.round(Math.random());
+
+        // Display the prediction result
+        var resultElement = document.getElementById('result');
+        if (prediction === 1) {
+            resultElement.innerHTML = '<strong>Result:</strong> High risk of heart disease';
+            resultElement.style.color = '#ff0000'; // Red color for high risk
+        } else {
+            resultElement.innerHTML = '<strong>Result:</strong> Low risk of heart disease';
+            resultElement.style.color = '#008000'; // Green color for low risk
+        }
+    }
+</script>
+
+</body>
+</html>
